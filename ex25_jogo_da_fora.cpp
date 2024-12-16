@@ -3,9 +3,8 @@
 
 using namespace std;
 
-string palavra = "bolo";
-string espaco = "_";
-int numTentativas = 6, numErros = 5;
+string palavra = "abacaxi",letrasDigitadas = "";
+int numTentativas = 6, numErros = 0;
 
 
 void painel(int tentativas) {
@@ -40,45 +39,41 @@ void painel(int tentativas) {
         cout << "--------" << endl;
 }
 
-void jogo(){
-    string letra;
-    cout << "Diz uma letra: ";
-    cin >> letra;
+void numTentativas(int& tentativas) {
+    cout << numTentativas - numErros << " de " << numTentativas << " tentativas restantes\n" <<;
 }
 
-string espacos(){
-    for (int i = 0; i < palavra.length(); i++){
-        cout << palavra.length[i] = espaco;
+void letrasEscolhidas(){
+    cout << "Lista das letras: " << letrasDigitadas << "\n";
+}
 
+void quadraDepalavras(){
+    for (int i = 0; i < palavra.length(); i++) {
+        cout << "_";
     }
+}
+
+void pedirLetras(){
+    string letra;
+    cout << "Digite uma letra: ";
+    cin >> letra;
 
 }
 
-/*string letraComoString(1, palavra[2]){
-    palavra[2] :: char;
-}*/
-
-bool vericarLetra(){
-
-    return 0;
-}
 
 bool verificarGanhou(){
 
-    return 0;
+
 }
 
 bool verificarPerdeu(){
-    if (numErros > numTentativas)if {
-        return true;
-    }
 
-    return false;
+    return numErros >= numTentativas;;
 }
 
 int main(){
 
-    painel(1);
+    painel(0);
     espacos();
 
     /*string letraComoString(1, palavra[2]);
